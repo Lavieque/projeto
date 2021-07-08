@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en" dir="ltr">
+	<head>
+		<title>Editorial by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<script src="https://npmcdn.com/js-alert/dist/jsalert.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	</head>
+
+        <style>
+           
+        </style>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+ 
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
+									<!--ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</-ul-->
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									
+									<div class="content">
+										<div class="container">
+                                            <div class="box-nav-flex-justify-between">
+                                                <a href="viatura" class="border-shadow">
+                                                    <span class="text-gradient">Introduzir viatura <i class="fas fa-car"></i></span>
+                                                </a>
+                                            </div>
+
+                                            <form  method="POST">
+                                                <table class="table">
+                                                    <thead class="thead-dark">
+                                                        <tr>
+                                                            <th>Número Interno</th>
+                                                            <th>Marca</th>
+                                                            <th>Modelo</th>
+                                                            <th>Matricula</th>
+                                                            <th>Númerode série</th>
+                                                            <th>Ação</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+														
+													<%for(var i=0; i<maquina.length; i++) {%>
+                                                        <tr>
+                                                            <td><%= maquina[i].idmaquina %></td>
+                                                            <td><%= maquina[i].nome_marca %></td>
+                                                            <td>  </td>
+                                                            <td><%= maquina[i].matricula %> </td>
+                                                            <td><%= maquina[i].nr_serie %>  </td>
+                                                            <td><a href="/atualizar_maquina?id=<%=maquina[i].idmaquina %>" class="btn border-shadow update">
+                                                                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                                            </a>
+															
+                                                            <a  class="btn border-shadow delete"   >
+                                                                <span class="text-gradient"><i class="fas fa-trash-alt"></i></span>
+																
+                                                            </a>
+															
+                                                        	</td>
+                                                        </tr>
+													<%}%>
+                                                    </tbody>
+                                                </table>
+												
+                                            </form>
+                                        </div>
+									</div>
+									
+									
+								</section>
+
+								
+
+							
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index">Home</a></li>
+										<li><a href="generic.html">Generic</a></li>
+										<li><a href="viatura">Viatura</a></li>
+										<li>
+											<span class="opener">Participação</span>
+											<ul>
+												<li><a href="avaria">Avaria</a></li>
+												<li><a href="manutencao">Manutenção</a></li>
+												<li><a href="inspecao">Inspeção</a></li>
+												<li><a href="acidente">Acidente</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Etiam Dolore</a></li>
+										<li><a href="#">Adipiscing</a></li>
+										<li>
+											<span class="opener">Registo de Equipamento</span>
+											<ul>
+												<li><a href="viatura">Viatura</a></li>
+												<li><a href="maquina">Máquina</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Maximus Erat</a></li>
+										<li><a href="#">Sapien Mauris</a></li>
+										<li><a href="#">Amet Lacinia</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<!--section>
+									<header class="major">
+										<h2>Ante interdum</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</!--section-->
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+										<li class="icon solid fa-phone">(000) 000-0000</li>
+										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+										Nashville, TN 00000-0000</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script>
+
+
+				function confirmDelete(id){
+						//var request ={
+							//url:"http://localhost:8000/api/viatura/${id}",
+							//method: "DELETE",
+                        
+                   		//}
+						   console.log(id)
+						   if(confirm("Tens certeza que queres apagar este registo?")){
+							///${id}
+							$.ajax({url:"http://localhost:8000/api/viatura",
+							method: "DELETE",data:{id:id}, success: function(response){
+                        		alert("Dados guardados com sucesso")
+								location.reload()
+							}})
+						} 
+
+						
+					/*
+					$ondelete = $(".table tbody td a.delete"); 
+									$ondelete.click(function(){
+										var id = $(this).attr(data-id)
+
+										
+										
+										
+									})
+									//*/
+				}
+
+
+				/*
+				if(window.location.pathname=="/"){ 
+					$ondelete = $(".table tbody td a.delete");
+					$ondelete.click(function(){
+						var id = $(this).attr(data-id)
+
+						var request ={
+							"url":'http://localhost:8000/api/viatura/${id}',
+							"method": "DELETE",
+                        
+                   		}
+						
+						if(confirm("Tens certeza que queres apagar este registo?")){
+							$.ajax(request).done(function(response){
+                        		alert("Dados guardados com sucesso")
+								location.reload()
+                    		})
+						}   
+					})
+				}
+				console.log(window.location.pathname)
+				//*/
+				
+				
+			</script>
+
+	</body>
+</html>
